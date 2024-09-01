@@ -43,7 +43,7 @@ export default function Home() {
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Jump now in the french pirate Next.js Logocommunity and challenge yourself!
+            Jump now in the french pirate community and challenge yourself!
           </p>
         </a>
 
