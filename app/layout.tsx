@@ -19,7 +19,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <ACursor />
+        {/* <ACursor /> */}
         </body>
     </html>
   );
