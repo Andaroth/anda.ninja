@@ -31,3 +31,112 @@ body {
     text-wrap: balance;
   }
 }
+
+@font-face {
+  font-family: "UbuntuTh";
+  src: url("/Fonts/Ubuntu-Th.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UbuntuL";
+  src: url("/Fonts/Ubuntu-L.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/Fonts/Ubuntu-R.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UbuntuB";
+  src: url("/Fonts/Ubuntu-B.ttf") format("truetype");
+}
+
+* {
+  font-family: "Ubuntu";
+  font-size: 18px;
+}
+
+strong, em, b { 
+  font-family: "UbuntuL";
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "UbuntuB";
+}
+
+strong, em, b,
+h2, h3, h4, h5, h6,
+a:hover {
+  color: #cc9a54;
+}
+
+code {
+  background-color: white;
+  color: black;
+  padding: 0 2px;
+  border-radius: 4px;
+}
+
+section {
+  background-position: center;
+}
+
+button.detail {
+  font-family: "UbuntuB";
+  padding: 24px;
+  background: #2e3133;
+  background: linear-gradient(
+    0deg,
+    rgba(204, 154, 84, 1) 0%,
+    rgba(204, 154, 84, 1) 50%,
+    rgba(46, 49, 51, 1) 51%,
+    rgba(46, 49, 51, 1) 100%
+  );
+  background-size: 100% 400%;
+  background-position: 0 0;
+  color: white;
+  min-width: 180px;
+  border-bottom: 4px solid #cc9a54;
+  /* border-radius: 0px !important;
+  clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 10% 100%, 0 80%); */
+  transition: all 1s cubic-bezier(0.2, 0.3, 0, 1);
+}
+button.detail.large {
+  font-family: "UbuntuL";
+  padding: 36px 24px;
+  font-size: 36px;
+  min-width: 260px;
+}
+button.detail.small {
+  padding: 12px;
+}
+button.detail:hover {
+  background-position: 0 100%;
+}
+
+.react-icons {
+  font-size: 24px;
+  margin: 0 auto;
+}
+.social:hover .react-icons {
+  color: #cc9a54;
+}
+
+.card {
+  max-width: 800px;
+  text-align: center;
+}
+
+.creation .thumbnail {
+  transition: all .5s ease;
+}
+
+.creation:hover .thumbnail {
+  transform: scale(1.1);
+}
+
+.hoverSpin {
+  transition: all .25s cubic-bezier(.18,.89,.32,1.28);
+}
+
+.hoverSpin:hover { 
+  transform: scale(1.2);
+}
