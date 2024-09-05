@@ -104,7 +104,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="dev" className="flex bg-blue-500 p-8 flex-col justify-end min-h-[100dvh] bg-[url('/img/clonex_001_mobile.jpeg')] md:bg-[url('/img/clonex_001.jpeg')] bg-cover bg-fixed">
+      <section id="dev" className="flex bg-blue-500 p-8 flex-col justify-end min-h-[100dvh] bg-[url(/img/clonex_001_mobile.jpeg)] md:bg-[url(/img/clonex_001.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-end">
           <div className="card flex flex-col gap-4 p-4 rounded-lg bg-[#00000088] w-[600px] max-w-full">
             <div className="flex justify-center">
@@ -120,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="flex bg-red-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url('/img/clonex_002_mobile.jpeg')] md:bg-[url('/img/clonex_002.jpeg')] bg-cover bg-fixed">
+      <section id="about" className="flex bg-red-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_002_mobile.jpeg)] md:bg-[url(/img/clonex_002.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-0 rounded-lg bg-[#00000088] overflow-hidden w-[800px] max-w-full">
             <div className="flex bg-[#00000088] p-4 gap-2 justify-center">
@@ -145,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="flex bg-blue-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url('/img/clonex_003_mobile.jpeg')] md:bg-[url('/img/clonex_003.jpeg')] bg-cover bg-fixed">
+      <section id="portfolio" className="flex bg-blue-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
             <h2 className="text-2xl">Web3 &amp; Blockchain</h2>
@@ -162,7 +162,7 @@ export default function Home() {
             </div>
             <div className="flex gap-2 justify-center">
               <aside className="hidden md:flex flex-col justify-center"><Image src="/img/emoji/wizard.svg" alt="decoration" width="32" height="32" /></aside>
-              <p className="text-center">My skills are refined and precise, <br />I'm a Code Guardian</p>
+              <p className="text-center">My skills are refined and precise, <br />I&apos;m a Code Guardian</p>
               <aside className="hidden md:flex flex-col justify-center"><Image src="/img/emoji/ninja.svg" alt="decoration" width="32" height="32" /></aside>
             </div>
             <div className="flex justify-center mt-4">
