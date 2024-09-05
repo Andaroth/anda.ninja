@@ -145,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="flex bg-blue-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
+      <section id="portfolio" className="flex bg-blue-500 p-8 md:pt-[30vh] flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
             <h2 className="text-2xl">Web3 &amp; Blockchain</h2>
