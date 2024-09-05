@@ -32,7 +32,7 @@ export default function Home() {
     { name: "GitHub", url: "https://github.com/Andaroth", icon: <FaGithub className="hoverSpin" size="2em" />},
     { name: "Twitter", url: "https://twitter.com/Andaroth", icon: <FaTwitter className="hoverSpin" size="2em" />},
     { name: "TikTok", url: "https://tiktok.com/@anda_pirate", icon: <FaTiktok className="hoverSpin" size="2em" />},
-    { name: "Instagram", url: "https://instagram.com/an.da.ro.th", icon: <FaInstagram className="hoverSpin" size="2em" />},
+    { name: "Instagram", url: "https://instagram.com/anda_pirate", icon: <FaInstagram className="hoverSpin" size="2em" />},
   ]
 
   useEffect(() => {
