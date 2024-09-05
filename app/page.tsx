@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <div id="topbar" className={cn(
-        "fixed px-2 flex justify-center top-0 left-0 w-full transition duration-200",
+        "fixed px-2 flex justify-center top-0 left-0 w-full transition duration-200 z-50",
         lastScrollState >= 80 ? "bg-[#00000088]" : ""
         )}
       >
@@ -77,12 +77,12 @@ export default function Home() {
             <ul className="flex justify-end gap-4">
               <li className="flex flex-col justify-center">
                 <Link
-                  className="flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
+                  className="hidden sm:flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
                   href="#"
                   onClick={(e) => handleScrollTo(e, "#about")}
                 >About me</Link>
               </li>
-              <li className="flex flex-col justify-center">
+              <li className="hidden sm:flex flex-col justify-center">
                 <Link
                   className="flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
                   href="#"
@@ -120,12 +120,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="flex bg-red-500 p-0 flex-col justify-center min-h-[100dvh] bg-[url('/img/clonex_002_mobile.jpeg')] md:bg-[url('/img/clonex_002.jpeg')] bg-cover bg-fixed">
+      <section id="about" className="flex bg-red-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url('/img/clonex_002_mobile.jpeg')] md:bg-[url('/img/clonex_002.jpeg')] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-0 rounded-lg bg-[#00000088] overflow-hidden w-[800px] max-w-full">
-            <div className="flex bg-[#00000088] py-4 gap-2 justify-center">
-              <Image src="/img/avatar.jpeg" alt="Axel Andaroth" width="48" height="48" className="rounded-[50%]" />
-              <h2 className="text-2xl flex flex-col justify-center">Passionate about new technologies</h2>
+            <div className="flex bg-[#00000088] p-4 gap-2 justify-center">
+              <div className="hidden md:block aspect-square">
+                <Image src="/img/avatar.jpeg" alt="Axel Andaroth" width="48" height="48" className="rounded-[50%]" />
+              </div>
+              <div className="flex flex-col justify-center">
+                <h2 className="text-2xl text-left]">Passionate about new technologies</h2>
+              </div>
             </div>
             <div className="flex flex-col p-8 gap-2">
               <p>Hello, my name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
@@ -157,9 +161,9 @@ export default function Home() {
               </Link>)}
             </div>
             <div className="flex gap-2 justify-center">
-              <aside className="flex flex-col justify-center"><Image src="/img/emoji/wizard.svg" alt="decoration" width="32" height="32" /></aside>
+              <aside className="hidden md:flex flex-col justify-center"><Image src="/img/emoji/wizard.svg" alt="decoration" width="32" height="32" /></aside>
               <p className="text-center">My skills are refined and precise, <br />I'm a Code Guardian</p>
-              <aside className="flex flex-col justify-center"><Image src="/img/emoji/ninja.svg" alt="decoration" width="32" height="32" /></aside>
+              <aside className="hidden md:flex flex-col justify-center"><Image src="/img/emoji/ninja.svg" alt="decoration" width="32" height="32" /></aside>
             </div>
             <div className="flex justify-center mt-4">
               <div className="flex flex-col">
