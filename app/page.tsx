@@ -92,9 +92,13 @@ export default function Home() {
               <li>
               <Link href="mailto:ax.fiolle@gmail.com" >
                 <button className="contact flex gap-2 justify-center border-2 my-2 py-0 px-2 rounded-md uppercase h-[48px] bg-black hover:bg-white hover:text-black">
-                  <p className="flex flex-col justify-center text-md">Contact</p>
-                  <div className="flex flex-col justify-center">
-                    <FaMarker size="1em" />
+                  <div className="flex flex-col h-full justify-center text-md">
+                    <span>Contact</span>
+                  </div>
+                  <div className="flex flex-col h-full justify-center">
+                    <span>
+                      <FaMarker size="1em" />
+                    </span>
                   </div>
                 </button>
                 </Link>
