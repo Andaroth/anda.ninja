@@ -1,0 +1,3 @@
+[submodule "public/pacpoule"]
+	path = public/pacpoule
+	url = https://github.com/Andaroth/pacpoule.git
