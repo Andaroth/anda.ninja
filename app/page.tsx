@@ -201,7 +201,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center">
             <Link className="flex gap-2 justify-center border-t-2 pt-2" href="https://hexofo.com" target="_blank">
-              <span>I'm the owner of HEXOFO™</span>
+              <span>I&apos;m the owner of HEXOFO™</span>
               <FaExternalLinkAlt size="14px" />
             </Link>
           </div>
