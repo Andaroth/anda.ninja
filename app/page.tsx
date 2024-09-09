@@ -117,7 +117,7 @@ export default function Home() {
             <p className="text-xl">With more than fifteen years <strong>building</strong> and <strong>revolutionizing</strong> <br />the <strong>web</strong>, I can help you to create and assert your project.</p>
             <div className="flex justify-center">
               <div className="flex flex-col">
-                <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#about")}>Learn more</button>
+                <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>Learn more</button>
               </div>
             </div>
           </div>
@@ -146,12 +146,12 @@ export default function Home() {
             </div>
             <div className="flex justify-center mt-4">
               <div className="flex flex-col">
-                  <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
-                <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>
-                    <p>Get in touch</p>
-                    <i></i>
-                </button>
-                  </Link>
+                <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
+                  <button className="detail rounded-md">
+                      <p>Let's collaborate!</p>
+                      <i></i>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -175,7 +175,12 @@ export default function Home() {
               <p>Let me help you getting online and expand on the <strong>Internet of Things</strong>!</p>
               <div className="flex justify-center mt-4">
                 <div className="flex flex-col">
-                  <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>Discover my work</button>
+                  <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
+                    <button className="detail rounded-md">
+                        <p>Get in touch</p>
+                        <i></i>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
