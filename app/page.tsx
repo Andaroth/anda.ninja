@@ -190,12 +190,24 @@ export default function Home() {
 
       <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] border-t-4 border-[#cc9a54]">
         <p>Remake in 2h with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
-        <Link className="flex gap-1 justify-center" href="https://github.com/Andaroth/vcard-andapirate" target="_blank">
-          <span>View codesource on GitHub</span>
-          <FaExternalLinkAlt size="14px" />
-        </Link>
+        <div className="mt-4">
+          <div className="flex flex-col gap-2">
+            <div className="flex justify-center">
+              <Link className="flex gap-1 justify-center" href="https://github.com/Andaroth/vcard-andapirate" target="_blank">
+                <span>View codesource on GitHub</span>
+                <FaExternalLinkAlt size="14px" />
+              </Link>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <Link className="flex gap-1 justify-center border-t-2 py-2" href="https://hexofo.com" target="_blank">
+              <span>I'm the owner of HEXOFO™</span>
+              <FaExternalLinkAlt size="14px" />
+            </Link>
+          </div>
+        </div>
         <div className="flex justify-center">
-          <div className="flex flex-col border-t-2 py-4">
+          <div className="flex flex-col py-2">
             <div className="flex justify-center gap-4">
               { socials.map(social => <Link key={socials.indexOf(social)} href={social.url} target="_blank">{social.icon}</Link>)}
             </div>
