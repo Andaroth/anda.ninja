@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] text-white border-t-4 border-[#cc9a54]">
-        <p>Remake in 2h with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
+        <p>Remake with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
         <div className="mt-4">
           <div className="flex flex-col gap-2 pb-2">
             <div className="flex justify-center">
