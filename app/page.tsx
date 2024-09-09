@@ -148,7 +148,7 @@ export default function Home() {
               <div className="flex flex-col">
                 <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
                   <button className="detail rounded-md">
-                      <p>Let's collaborate!</p>
+                      <p>Let&apos;s collaborate!</p>
                       <i></i>
                   </button>
                 </Link>
