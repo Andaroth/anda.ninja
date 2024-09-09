@@ -63,15 +63,15 @@ export default function Home() {
   }
 
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col text-white">
       <div id="topbar" className={cn(
         "fixed px-2 flex justify-center top-0 left-0 w-full transition duration-200 z-50",
         lastScrollState >= 80 ? "bg-[#00000088]" : ""
         )}
       >
-        <div className="flex w-full justify-between">
+        <div className="flex w-full justify-between text-white">
           <div className="flex flex-col justify-center">
-            <h1><Link href="#" onClick={(e) => handleScrollTo(e, "#dev")} className="text-3xl">![Λnda]</Link></h1>
+            <h1 className="text-white"><Link href="#" onClick={(e) => handleScrollTo(e, "#dev")} className="text-3xl">![Λnda]</Link></h1>
           </div>
           <nav>
             <ul className="flex justify-end gap-4">
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section id="dev" className="flex bg-blue-500 p-8 flex-col justify-end min-h-[100dvh] bg-[url(/img/clonex_001_mobile.jpeg)] md:bg-[url(/img/clonex_001.jpeg)] bg-cover bg-fixed">
+      <section id="dev" className="flex text-white p-8 flex-col justify-end min-h-[100dvh] bg-[url(/img/clonex_001_mobile.jpeg)] md:bg-[url(/img/clonex_001.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-end">
           <div className="card flex flex-col gap-4 p-4 rounded-lg bg-[#00000088] w-[600px] max-w-full">
             <div className="flex justify-center">
@@ -124,7 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="flex bg-blue-500 p-8 md:pt-[30vh] flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
+      <section id="portfolio" className="flex text-white p-8 md:pt-[30vh] flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
             <h2 className="text-2xl">Web3 &amp; Blockchain</h2>
@@ -158,7 +158,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="flex bg-red-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_002_mobile.jpeg)] md:bg-[url(/img/clonex_002.jpeg)] bg-cover bg-fixed">
+      <section id="about" className="flex text-white p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_002_mobile.jpeg)] md:bg-[url(/img/clonex_002.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-0 rounded-lg bg-[#00000088] overflow-hidden w-[800px] max-w-full">
             <div className="flex bg-[#00000088] p-4 gap-2 justify-center">
@@ -188,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] border-t-4 border-[#cc9a54]">
+      <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] text-white border-t-4 border-[#cc9a54]">
         <p>Remake in 2h with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
         <div className="mt-4">
           <div className="flex flex-col gap-2 pb-2">
