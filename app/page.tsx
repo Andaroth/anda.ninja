@@ -75,19 +75,19 @@ export default function Home() {
           </div>
           <nav>
             <ul className="flex justify-end gap-4">
-              <li className="flex flex-col justify-center">
-                <Link
-                  className="hidden sm:flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
-                  href="#"
-                  onClick={(e) => handleScrollTo(e, "#about")}
-                >About me</Link>
-              </li>
               <li className="hidden sm:flex flex-col justify-center">
                 <Link
                   className="flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
                   href="#"
                   onClick={(e) => handleScrollTo(e, "#portfolio")}
                 >My work</Link>
+              </li>
+              <li className="flex flex-col justify-center">
+                <Link
+                  className="hidden sm:flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
+                  href="#"
+                  onClick={(e) => handleScrollTo(e, "#about")}
+                >About me</Link>
               </li>
               <li>
               <Link href="mailto:ax.fiolle@gmail.com" >
@@ -124,31 +124,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="flex bg-red-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_002_mobile.jpeg)] md:bg-[url(/img/clonex_002.jpeg)] bg-cover bg-fixed">
-        <div className="flex justify-center">
-          <div className="card flex flex-col gap-2 p-0 rounded-lg bg-[#00000088] overflow-hidden w-[800px] max-w-full">
-            <div className="flex bg-[#00000088] p-4 gap-2 justify-center">
-              <div className="hidden md:block aspect-square">
-                <Image src="/img/avatar.jpeg" alt="Axel Andaroth" width="48" height="48" className="rounded-[50%]" />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="text-2xl text-left]">Passionate about new technologies</h2>
-              </div>
-            </div>
-            <div className="flex flex-col p-8 gap-2">
-              <p>Hello, my name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
-              <p>My dedication for the <strong>art of code</strong> and my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
-              <p>Let me help you getting online and expand on the <strong>Internet of Things</strong>!</p>
-              <div className="flex justify-center mt-4">
-                <div className="flex flex-col">
-                  <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>Discover my work</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="portfolio" className="flex bg-blue-500 p-8 md:pt-[30vh] flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
@@ -177,6 +152,31 @@ export default function Home() {
                     <i></i>
                 </button>
                   </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="flex bg-red-500 p-8 flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_002_mobile.jpeg)] md:bg-[url(/img/clonex_002.jpeg)] bg-cover bg-fixed">
+        <div className="flex justify-center">
+          <div className="card flex flex-col gap-2 p-0 rounded-lg bg-[#00000088] overflow-hidden w-[800px] max-w-full">
+            <div className="flex bg-[#00000088] p-4 gap-2 justify-center">
+              <div className="hidden md:block aspect-square">
+                <Image src="/img/avatar.jpeg" alt="Axel Andaroth" width="48" height="48" className="rounded-[50%]" />
+              </div>
+              <div className="flex flex-col justify-center">
+                <h2 className="text-2xl text-left]">Passionate about new technologies</h2>
+              </div>
+            </div>
+            <div className="flex flex-col p-8 gap-2">
+              <p>Hello, my name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
+              <p>My dedication for the <strong>art of code</strong> and my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
+              <p>Let me help you getting online and expand on the <strong>Internet of Things</strong>!</p>
+              <div className="flex justify-center mt-4">
+                <div className="flex flex-col">
+                  <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>Discover my work</button>
+                </div>
               </div>
             </div>
           </div>
