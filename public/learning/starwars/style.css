@@ -1,0 +1,97 @@
+@keyframes crawler {
+    0% {transform: translate3d(0,100vh,0); opacity: 0;}
+    .25% {transform: translate3d(0,100vh,0); opacity: 1;}
+    80% {opacity: 1;}
+    95% {opacity: 0;}
+    100% {transform: translate3d(0,-100vh,0);}
+}
+
+@keyframes showHide {
+    0% {opacity: 1;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+body {
+    background: black;
+    background-image: url("./img/spaaace.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    color: yellow;
+    
+    font-family: Impact, sans-serif;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    
+    margin: 0 auto;
+}
+
+.longtime {
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    display: flex;
+    
+    font-family: arial;
+    
+    
+    color: skyblue;
+    opacity: 0;
+    
+    transition: .5s ease;
+    
+    animation-name: showHide;
+    animation-duration: 9s;
+    
+    width: 100%;
+    height: 100vh;
+    
+    background: black;
+    
+    z-index: 10;
+}
+
+.perspective {
+    display: block;
+    
+    max-width: 600px;
+    
+    margin: 0 auto;
+    
+    transform: perspective(300px) rotateX(15deg);
+}
+
+.slider {
+    animation-name: crawler;
+    animation-duration: 90s;
+    
+    opacity: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    line-height: 2em;
+    
+    width: 100%;
+    text-align: justify;
+}
+
+.longtime p {
+    margin: auto;
+    text-align: left;
+    width: 500px;
+}

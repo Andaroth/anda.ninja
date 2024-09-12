@@ -1,0 +1,95 @@
+body {
+	background: url("./img/cosmicw.jpg") center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	width: 100%;
+	margin : auto;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+img {
+	border: none; 
+	margin: auto;
+}
+
+#header
+{
+	background-image: url("./img/transp_header.png");
+	padding-top: 25px;
+	padding-left: 5%;
+}
+	
+#title
+{
+	color: #CF6;
+	font-size: 26pt;
+}
+
+#describ
+{
+	color: #CFC;
+	font-size: 22pt;
+}
+
+#navbar
+{
+	background-image: url("./img/transp_navbar.png");
+	font-size: 18pt;
+	padding-top: 10px;
+	padding-left: 10%;
+	padding-bottom: 10px; 
+	
+	border-bottom: 1px solid #CC6;
+}
+
+.navbar a
+{
+	
+	background-image: none;
+	color: #CC6;
+	text-decoration: none;
+}
+.navbar a:hover
+{
+	color: #CFC;
+	text-decoration: underline;
+}
+
+#inner
+{
+	color: #EED;
+	background: url("./img/transp_ct.png");
+	background-size: cover;
+	padding-top: 6px;
+	padding-left: 5%;
+	padding-right: 5%;
+	
+	padding-bottom: 4px;
+}
+.blok
+{
+	border: 1px solid #EED;
+	padding: 20px;
+	text-align: center;
+}
+h1
+{
+	color: #BB6;
+	font-size: 16pt; 
+}
+p
+{
+	color: #EED;
+	font-size: 14pt;
+	padding-left: 15px;
+}
+
+#footer
+{
+	background-image: url("./img/transp_ft.png");
+	clear: both;
+	border-top: 1px solid #CC6;
+	border-bottom: 1px solid #CC6;
+	text-align: center;
+	padding: 5%;
+}

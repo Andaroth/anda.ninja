@@ -1,0 +1,6 @@
+DirectoryIndex index.html
+
+
+RewriteEngine Off
+
+Options +Indexes

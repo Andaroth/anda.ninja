@@ -1,0 +1,107 @@
+
+
+.about {
+    display: block;
+}
+
+.sidebar {
+    width: 100%;
+    height: 70px;
+    
+    padding-top: 0;
+    
+    background: rgba(255,255,255,.7);
+    
+    overflow-y: initial;
+    
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    
+    transform: translateX(0);
+}
+
+.pdp { 
+    margin-top: 10px;
+    height: 50px;
+    width: 50px;
+    
+    float: left;
+}
+
+.chara h1 { 
+    font-size: 50px; 
+    margin: 0;
+    
+    height: 70px;
+    overflow: hidden;
+}
+
+main section h2 {
+    margin-bottom: 40px;
+}
+
+.about {
+    display: none;
+    position: absolute;
+    top: 0;
+    
+    padding: 20px;
+}
+
+#about:target {
+    display: block;
+    background: white;
+}
+
+.about h2 {
+    margin-top: 0;
+}
+
+nav {
+    display: none;
+}
+
+.allcontent {
+    margin-left: 0;
+    margin-top: 60px;
+}
+
+.mobonly {
+    display: initial;
+    
+    position: absolute;
+    
+    top: 25px;
+    right: 25px;
+}
+
+.mobonly a {
+    color: black;
+}
+
+.floater {
+    grid-template-columns: 100%;
+}
+
+.superfloater {
+    grid-template-columns: 50% 50%;
+}
+
+#folio ul {
+    grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width:450px) {
+    
+    .chara h1 {
+        font-size: 2em;
+        line-height: 2em;
+        padding-left: 5px;
+        text-align: left;
+    }
+    
+    #folio ul li a span {
+        display: none;
+    }
+    
+}

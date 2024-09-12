@@ -1,0 +1,425 @@
+/* @font-face va me permettre d'utiliser mes propres polices sur mon site, et ce sans devoir les chercher en ligne */
+@font-face {
+    /* On choisit le nom par lequel on va l'invoquer */
+    font-family: RobotoM;
+    /* Et on indique l'emplacement de la police */
+    src: url("./fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: Wimp-Out;
+    src: url("./fonts/wimpe.ttf");
+}
+/* Notez que je déclare mes font-face en début de fichier */
+
+/* Toutes les valeurs de taille que j'indiquerai comprendront les bordures des éléments */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Petit margin de 50px en haut pour épouser la forme du <header> */
+    margin: 50px 0 0 0;
+    padding: 0;
+    /* Tous ces zéros retirent les bords de vos pages */
+    /* Et ici j'indique que la police par défaut de la page est Roboto, que j'ai appelée en haut, dans le font-face */
+    font-family: Roboto;
+}
+#top {
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header {
+    /* block pour pouvoir lui donner facilement la forme que je veux */
+    display: block;
+    margin: 0;
+    /* Pas nécessaire, perso j'aime bien avoir le header fix en haut de la page pour l'avoir à porté de main, je trouve ça mieux pour l'UX */
+    position: fixed;
+    /* On met le header en haut à droite */
+    top: 0;
+    left: 0;
+    /* Toute la largeur de l'écran */
+    width: 100%;
+    
+    height: 50px;
+    /* rgba(ROUGE,VERT,BLEU,Transparence) */
+    background: rgba(255,255,255,.7);
+    /* Permet de garder le header visible par dessus tout le reste */
+    z-index: 10;
+}
+
+.menu {
+    display: block;
+    /* En haut, fixe et à droite */
+    top: 0;
+    position: fixed;
+    right: 15px;
+}
+
+.menu ul {
+    /* Pas de puces, c'est moche */
+    list-style: none;
+    /* Pas d'écart à gauche, c'est moche */
+    padding-left: 0;
+    /* Pour éviter que le margin ne décale le ul */
+    margin: 0;
+    /* Pour que les <li> soient des block en ligne */
+    display: inline-block;
+}
+
+.menu ul li {
+    /* Pour les faire s'aligner à la suite dans l'horizontal */
+    float: left;
+}
+/* C'est sur <a> qu'il faut mettre du style car c'est <a> précisément qui est le lien cliquable */
+.menu ul li a {
+    display: block;
+    
+    color: #151515;
+    font-family: RobotoM;
+    
+    height: 50px;
+    line-height: 50px;
+    /* la hauteur de ligne == la hauteur du <header>, ainsi le texte est correctement aligné au milieu dans la verticale */
+    /*  */
+    padding: 0 10px;
+    /* Pas de soulignement */
+    text-decoration: none;
+    /* Je fais une bordure transparente... */
+    border-bottom: 5px solid transparent;
+}
+.menu ul li a:hover,
+.menu ul li a:focus {
+    /* ... comme ça, je peux la faire apparaître lorsque l'on survole à la souris ou que le sélecteur est sur l'élément */
+    border-bottom: 5px solid green;
+    color: green;
+    /* Ombre non floue à 1px vers le bas */
+    text-shadow: 0 1px 0 yellow;
+}
+/* Tous les titres sont en Roboto Medium */
+h1, h2, h3, h4, h5, h6 {
+    font-family: RobotoM;
+}
+/* Le titre du site */
+h1 {
+    margin: 0;
+    padding: 0 15px;
+    /* Pareil que pour le menu, hauteur de ligne == hauteur du header */
+    line-height: 50px;
+    /* Juste la police d'écriture GreenPeace */
+    font-family: Wimp-Out;
+}
+/* Le lien cliquable du site */
+h1 a { 
+    /* Je déclare la couleur DANS le lien sinon le style par défaut des <a> va le rendre bleu */
+    color: darkgreen; 
+    text-decoration: none;
+    
+    text-shadow: 1px 0 2px white;
+}
+h1 a:hover,
+h1 a:focus {
+    text-shadow: 0 0 5px yellow;
+}
+/* La première section */
+.welcome { 
+    /* La bannière du site */
+    background-image: url("./img/forest.jpg");
+    background-position: top center;
+    background-size: cover;
+    /* Je fais une hauteur fixe car sinon c'est chiant pour la .box */
+    height: 600px;
+}
+
+.box {
+    display: block;
+    float: left;
+    /* float left + ceci */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    /* Permet dans certains cas de mettre un block au centre de la largeur */
+    
+    color: white;
+    background-color: rgba(0,0,0,.7);
+    
+    width: 400px;
+    
+    padding: 10px;
+    /* Des coins arrondis */
+    border-radius: 10px;
+    /* Pour décaler la .box comme selon le layout */
+    margin-top: 400px;
+    /* UX */
+    text-align: center;
+}
+.boxtitle {
+    margin: 5px auto;
+    color: greenyellow;
+}
+/* Styler le <a> en boutton */
+a.button { 
+    display: block;
+    
+    padding: 5px;
+    
+    background: yellow;
+    color: darkgreen;
+    
+    font-family: RobotoM;
+    /* Retirer le soulignement, car c'est un bouton */
+    text-decoration: none;
+    /* Plutôt qu'tiliser height et width, padding va ici me permettre de grossir le bouton, tout en préservant la zone cliquable jusqu'aux bords visibles du bouton */
+    padding: 5px;
+    margin: 10px auto;
+    /* Je suis quand-même obligé de définir sa largeur maximale, sinon il prend 100% */
+    max-width: 200px;
+    font-size: 1.5em;
+    
+    border: 2px solid yellow;
+    
+    border-radius: 3px;
+    /* Permet de faire une transition entre son apparence au repos/survolé... */
+    transition: .2s ease-in-out;
+}
+a.button:hover,
+a.button:focus {
+    background: transparent;
+    color: yellow;
+    /* ... et légèrement agrandir la taille du <a> au survol pour rendre la sensation du bouton clicable */
+    transform: scale(1.1);
+}
+/* Cette hauteur de ligne me semble judicieuse pour une lecture agréable tout en restant compact sur tous les appareils */
+.about ul li p { 
+    line-height: 1.5em; 
+}
+/* Le container pour les trois points de présentation */
+.three_col {
+    /* On lui donne le display block pour pouvoir l'utiliser un peu comme un tableau */
+    display: block;
+    /* je délimite la zone à 800px pour une lecture plus confortable */
+    max-width: 800px;
+    /* le margin horizontal réglé sur auto permet d'aligner les blocks au centre  */
+    margin: 0 auto;
+}
+/* Chaque colonne devra suivre ces règles */
+.three_col div{
+    float: left; 
+    width: 235px;
+    /* Le margin à droite et en bas définit les goutières et en même temps pousse le bas de la <section> pour augmenter la lisibilité */
+    margin: 0 47px 50px 0;
+}
+/* Excepté la dernière */
+.three_col div:last-child {
+    /* ... qui n'a pas de margin à droite pour pouvoir rentrer dans les 800px de large du parent */
+    margin-right: 0;
+}
+
+.quotesection {
+    /* Vu que l'élément précédent contient des float left, il convient de mettre un clear both dans l'élément suivant pour qu'il viennent bien se placer EN DESSOUS */
+    clear: both;
+    
+    margin: 20px 0 0 0;
+    /* On donne une image d'arrière plan, fixe */
+    background-image: url("./img/tiger.jpg");
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    text-align: center;
+    line-height: 250px;
+}
+/* Je fais un bord penché à la section avec :before pour créer de la dynamique 
+
+J'utilise before pour créer une forme de type block sans devoir l'écrire dans le .html */
+.quotesection:before {
+    /* content "" + display block pour créer une forme vide */
+    content: "";
+    display: block;
+    /* Float left pour ne pas déranger la mise en page des autres éléments */
+    float: left;
+    /* 100% pour que l'illusion prenne toute la largeur de l'écran */
+    width: 100%;
+    /* Une valeur (ici arbitraire) pour que le block cache efficacement le bord de la section */
+    height: 75px;
+    /* On donne la couleur de fond au block */
+    background: white;
+    /* On skew() pour tordre/incliner le block et ainsi donner l'illusion d'un bord de section penché ! */
+    transform: skewY(-2deg) translateY(-35px);
+    /* Le translate c'est pour bien cacher toute la bordure d'origine */
+}
+/* Tout pareil, mais avec :after pour le bord du bas */
+.quotesection:after {
+    content: "";
+    display: block;
+    float: left;
+    
+    width: 100%;
+    height: 85px;
+    
+    background: #151515;
+    
+    transform: skewY(-2deg) translateY(-50px);
+}
+/* Avec la balise <blockquote, ici nommée .quote, je créé un block qui va prendre toute la largeur de la page */
+.quote {
+    /* Ce fond transparent permet d'améliorer la lisibilité du texte */
+    background: rgba(0,0,0,.7);
+    display: block;
+    
+    line-height: 2em;
+    font-size: 2em;
+    
+    margin: 0 auto;
+    
+    color: yellow;
+}
+
+.quote h3 { 
+    display: block;
+    /* 800px pour garder de la lisibilité */
+    width: 800px; 
+    margin: 0 auto;
+    /* Je mets 33% de la Vertical Height en haut et en bas du h3 en padding pour agrandir la <section> tout en gardant l'image d'arrière-plan par le background de .quote */
+    padding: 33vh 0;
+}
+
+.playersection { 
+    /* Un peu de padding pour la respirabilité du texte */
+    padding: 50px 0 100px ;
+    margin: 0 auto;
+    /* Sombre pour améliorer la visibilité de la vidéo */
+    background: #151515;
+    color: #555;
+}
+/* Le container de cette section */
+.playersection div {
+    display: block;
+    /* Vous connaissez la chanson */
+    width: 800px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.playersection div div.player {
+    display: block;
+    float: left;
+    /* Largeur deux colonnes */
+    width: 530px;
+}
+.video_climate {
+    display: block;
+    /* On force la forme de cette saleté de iframe */
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.playersection div div.player_text {
+    /* float right car flemme de calculer le margin */
+    float: right;
+    width: 220px;
+}
+/* Le style du texte accompagnant la vidéo */
+.videotitle { color: darkgreen; }
+.player_text p { line-height: 33px; }
+/* La section des autres associations */
+.others {
+    /* On oublie pas le clear both car on a fait du float left et right juste au dessus */
+    clear: both;
+    display: block;
+    padding: 50px;
+    
+    background-color: #dedede;
+    
+    text-align: center;
+}
+
+.others h2 {
+    font-size: 2em;
+    color: #afafaf;
+    padding-bottom: 35px;
+}
+/* On va créer des tuiles avec les liens/images des associations */
+.assos { 
+    /* Pour que les li soient des blocks en ligne */
+    display: inline-block;
+    
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100%; 
+    
+    list-style: none;
+    padding-left: 0;
+}
+/* Les tuiles */
+.assos li {
+    /* Tu connais */
+    float: left; 
+    display: block;
+    /* Espacement entre les tuiles (haut, droite, bas, gauche) */
+    margin: 0 28px 28px 0;
+}
+/* Tous les <li> de la 4ème colonne */
+.assos li:nth-child(4n) {
+    /* Sont privés de margin right pour fit dans les 800px */
+    margin: 0 0 28px 0;
+}
+/* On donne la forme des tuiles sur la <a> pour que toute la surface soit clicable */
+.assos li a {
+    display: block;
+    
+    width: 179px;
+    height: 179px;
+    
+    background: rgba(255,255,255,.6);
+    /* Transition pour smooth tout ça */
+    transition: .2s ease-in-out;
+}
+/* Effet :D */
+.assos li a:hover,
+.assos li a:focus {
+    transform: scale(1.05);
+}
+/* Pour que les images n'hésitent pas à fit dans la plus grande largeur possible */
+.assos li a img {
+    max-height: 179px;
+    max-width: 179px;
+}
+/* Le bouton pour remonter tout en haut du site */
+#goTop {
+    /* Fixed pour l'avoir tout le temps à portée de main */
+    position: fixed;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    /* En bas à droite pour qu'il ne gêne pas le design */
+    right: 25px;
+    bottom: 25px;
+    
+    border-radius: 4px;
+    background: rgba(0,0,0,.6);
+    /* On cache le texte du bouton sans faire de text-indent de m*rde 
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;*/
+}
+#goTop:hover {
+    background: grey;
+    /* On change le curseur en pointeur au survol pour indiquer qu'on peut cliquer */
+    cursor: pointer;
+}
+#goTop { text-decoration: none; }
+a#goTop i {
+    display: block;
+    margin: auto;
+    color: white;
+    font-size: 2em;
+}

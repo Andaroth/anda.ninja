@@ -1,0 +1,38 @@
+body {
+    overflow-y: scroll;
+}
+
+#content {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    
+    margin: 0 auto;
+    transform: none;
+    
+    padding: 5px;
+}
+
+.prez, .contact { 
+    float: initial;
+    margin: 0 auto 15px auto;
+}
+
+h1, h2, h3, h4, h6, p {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+    
+    border-bottom: 0;
+    text-align: center;
+}
+nav ul li { 
+    margin: 5px;
+}
