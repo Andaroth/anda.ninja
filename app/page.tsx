@@ -21,8 +21,10 @@ export default function Home() {
   const [delta, setDelta] = useState(0)
 
   const creations = [
-    { name: "RTFKT", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element"] },
+    { name: "RTFKT", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS"] },
+    { name: "Cryptopunk", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL"] },
     { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS"] },
+    { name: "Winnables", description: "Blockchain trades & gambling", url: "https://winnables.com", img: "/img/b2b/winnables.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS"] },
     { name: "GameOfBlocks", description: "Web3 Multiplayer Gaming", url: "https://gameofblocks.io", img: "/img/b2b/screenshot.jpeg", techs: ["ReactJS", "Blitz", "express"] },
     { name: "Sk8boarders", description: "Tailoring pages at any scale", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg", techs: ["WordPress", "PHP", "HTML/CSS"] },
   ]
