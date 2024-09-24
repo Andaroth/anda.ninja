@@ -52,7 +52,6 @@ export default function Home() {
   const handleScrollTo = (e: any, anchor: string) => {
     e.preventDefault()
     const domElement = document.querySelector(anchor)
-    console.log('domElement', domElement)
     if (domElement) {
       window.scroll({
         top: window.scrollY + (domElement.getBoundingClientRect().top || 0), 
@@ -61,6 +60,18 @@ export default function Home() {
       });
     }
   }
+
+  useEffect(() => {
+    if (window.location.href.includes('#')) {
+      const anchor = window.location.href.split('#')[1]
+      const domAnchor = document.querySelector('#' + anchor)
+      if (domAnchor) window.scroll({
+        top: window.scrollY + (domAnchor.getBoundingClientRect().top || 0), 
+        left: 0, 
+        behavior: 'smooth' 
+      });
+    }
+  }, [])
 
   return (
     <main className="flex flex-col text-white">
