@@ -1,0 +1,61 @@
+/* On tente mine de rien d'empêcher tous les éléments de dépasser les 800px */
+* {
+    max-width: 800px;
+}
+/* Plus petit pour s'adapter aux petits écrans */
+.welcome {
+    height: 250px;
+}
+/* En attendant de faire un menu portable */
+.menu { display: none; }
+/* La box devient 100% de large */
+.box {
+    margin-top: 170px;
+    width: 100%;
+    
+    border-radius: 0;
+}
+/* La citation doit être moins large */
+.quote h3 { 
+    width: initial;
+    max-width: 400px;
+}
+/* Le container de la vidéo s'adapte à la largeur de l'écran */
+.playersection div {
+    width: auto;
+}
+/* La vidéo sera au dessus de son texte et prendra toute la largeur disponible */
+.playersection div div.player,
+.playersection div div.player_text {
+    clear: both;
+    width: 100%;
+}
+
+.player_text p {
+    background: #151515;
+    margin: 0;
+    padding: 15px;
+}
+/* Les 3 points de description se suivent en vertical pour une meilleure expérience sur téléphones */
+.three_col div {
+    width: 100%;
+    padding-right: 50px;
+}
+/* On change les tuiles et leur container en flexbox ... */
+.assos {
+    width: auto;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* ... pour les enchaîner à la vertical également */
+.assos li {
+    width: 150px;
+    margin: 15px auto;
+}
+/* On annule la diff de margin sur le 4nème élément */
+.assos li:nth-child(4n) {
+    margin: 15px auto;
+}

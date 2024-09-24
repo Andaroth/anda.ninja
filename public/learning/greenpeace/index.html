@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Le tag ci-dessus doit nécessairement être en ligne 1, il sert à indiquer au navigateur que ce fichier est du HTML5 -->
+<html lang="en">
+    <head>
+        <title>Greenpeace</title>
+        <meta charset="utf-8" />
+        <!-- Force l'échelle (zoom) à 100% -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!-- Pour les écrans de moins de 800px de large (mobiles), appliquer ce CSS en plus du précédent -->
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="portable.css" />
+        
+    </head>
+    
+    <body>
+       <!-- Cette balise tout en haut du site sert au bouton "goTop" pour remonter au haut de la page -->
+        <div id="top"></div>
+        <!-- Le <header> peut être votre bannière, pour moi c'est la barre fixe du haut -->
+        <header>
+            <!-- Le titre de la page en h1 pour le SEO. Il n'y a qu'un seul h1 par page web. -->
+            <h1><a href="./index.html">Greenpeace</a></h1>
+            <!-- Balise <nav> pour que les moteurs de recherche annexent bien, ils reconnaissent cette balise comme le menu de navigation principal -->
+            <nav class="menu">
+                <ul>
+                    <li><a href="http://www.greenpeace.org/international/en/about/">About us</a></li>
+                    <li><a href="http://www.greenpeace.org/international/en/campaigns/">What we do</a></li>
+                    <li><a href="http://www.greenpeace.org/international/en/news/">News</a></li>
+                    <li><a href="http://www.greenpeace.org/international/en/getinvolved/">Collaborate</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- La première section, la bannière et la *phrase d'accroche* (donations, lol) -->
+        <section class="welcome">
+            <!-- L'encadré des donations -->
+            <div class="box">
+                <h2 class="boxtitle">We accept no corporate or government donations</h2>
+                <p class="introtxt">
+                    We rely totally on individual supporters like you to fund our work.
+                </p>
+                <p class="introtxt">
+                    That's why your donation is so critical. <strong>Thank you</strong> for your support. It means the world.
+                </p>
+                <!-- Un <a> suffit à faire n'importe quel type de bouton -->
+                <a class="button" href="#">Donate now !</a>
+            </div>
+        </section>
+        <!-- Une description en trois points -->
+        <section class="about">
+            <!-- Ici le container "three_col" pour délimiter la zone -->
+            <div class="three_col">
+                <!-- Chaque <div> représente une colonne -->
+                <div class="col_left">
+                    <h2>Greenpeace investigates</h2>
+                    <p>Campaigns, documents and lobbies for a sustainable balance between humans and the environment worldwide. And if this doesn’t help, *we expose* environmental abuses by carrying out non-violent direct actions.</p>
+                </div>
+                <!-- Chaque <div> a donc une classe différente pour faciliter le ciblage dans le CSS -->
+                <div class="col_mid">
+                    <h2>It's a positive vision rooted in *hope*</h2>
+                    <p>The conviction that when people in large numbers believe change is possible, change becomes possible. We believe that when we take Nature as our mentor, and measure, we can change the way we feed and fuel our world.</p>
+                </div>
+                <!-- Notez que cette <div> est la dernière à l'intérieur de #three_col -->
+                <div class="col_right">
+                    <h2>Our climate is the engine for life</h2> <p>Support systems that sustain and nurture us all. Climate and weather drive the ebb and flow of life, making rivers run, crops grow, and forests flourish. But now this vital foundation of life has been pushed off balance.</p>
+                </div>
+            </div>
+        </section>
+        <!-- La partie avec la citation -->
+        <section class="quotesection">
+            <!-- <blockquote> est la balise adéquate pour faire des citations -->
+            <blockquote class="quote" cite="https://www.brainyquote.com/quotes/quotes/f/felixdenni555104.html?src=t_greenpeace">
+                <!-- J'utilise la balise de titre h3 par style et également parce qu'une <section> doit obligatoirement contenir au moins un titre -->
+                <h3>The planet doesn't require saving, and actually hasn't asked Greenpeace to save it.</h3></blockquote>
+        </section>
+        <!-- La partie avec la vidéo -->
+        <section class="playersection">
+            <!-- Ce <div> sert de container pour simuler 3 colonnes... -->
+            <div>
+                <!-- La vidéo YT prend la largeur de 2 colonnes dans le CSS -->
+                <div class="player">
+                    <iframe class="video_climate" src="https://www.youtube.com/embed/esj393oRKPc?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
+                </div>
+                <!-- Ainsi, je garde la largeur de 1 colonne pour la zone de texte -->
+                <div class="player_text">
+                    <h2 class="videotitle">Climate is changing fast !</h2>
+                    <p>Climate change threatens to unravel Earth's complex web of life, and puts livelihoods, coastal cities and food production at risk. It's the gravest threat to life we know.</p>
+                </div>
+            </div>
+        </section>
+        <!-- La section indiquant d'autres associations -->
+        <section class="others">
+            <h2>Other associations</h2>
+            <!-- .assos délimite la zone pour la liste des *partenaires* -->
+            <ul class="assos">
+                <!-- Liste de block en float left pour former des tuiles responsive sans grid -->
+                <li><a href="#"><img src="./img/ico/baraka.png" alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/chouette.png" alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/terre.jpg"  alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/fasi.jpg" alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/crabe.png" alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/abc.png" alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/solon.png" alt="assos"></a></li>
+                <li><a href="#"><img src="./img/ico/klimaat.jpg" alt="assos"></a></li>
+            </ul>
+        </section>
+        <!-- Un bouton pour revenir en haut de la page, on lui donne un ID pour pouvoir faire un scroll en douceur avec le app.js -->
+        <a href="#top" id="goTop">
+            <i class="fa fa-arrow-circle-o-up"></i>
+        </a>
+        <!-- J'appelle jQuery et mon app.js à la fin du document, on m'a appris que ça éviterait aux scripts de s'exécuter avant que la page ne soit entièrement chargée. -->
+        <script type="text/javascript" src="./js/jquery.js"></script>     
+        <script type="text/javascript" src="./js/app.js"></script>
+        <!-- HAPPY END -->
+    </body>
+</html>
