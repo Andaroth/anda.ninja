@@ -21,12 +21,14 @@ export default function Home() {
   const [delta, setDelta] = useState(0)
 
   const creations = [
-    { name: "RTFKT", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs"] },
-    { name: "Cryptopunk", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js"] },
-    { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "i18n"] },
-    { name: "Winnables", description: "Blockchain trades & gambling", url: "https://winnables.com", img: "/img/b2b/winnables.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS"] },
+    { name: "RTFKT", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs", "MongoDB"] },
+    { name: "Cryptopunk", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "NoDB"] },
+    { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "i18n", "pgSQL"] },
+    { name: "Winnables", description: "Blockchain trades & gambling", url: "https://winnables.com", img: "/img/b2b/winnables.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "pgSQL"] },
+    { name: "iCure", description: "Connecting people to health online", url: "https://icure.com/fr/", img: "/img/b2b/icure.jpeg", techs: ["PolymerJS", "Kotlin", "BE gov API", "MySQL"] },
     { name: "GameOfBlocks", description: "Web3 Multiplayer Gaming", url: "https://gameofblocks.io", img: "/img/b2b/screenshot.jpeg", techs: ["ReactJS", "Blitz", "etherjs", "express", "Ganache"] },
-    { name: "Sk8boarders", description: "Tailoring pages at any scale", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg", techs: ["WordPress", "PHP", "HTML/CSS"] },
+    { name: "TimbTrack", description: "Leading IoT innovation", url: "https://timbtrack.com", img: "/img/b2b/timbtrack.jpeg", techs: ["VueJS", "PHP", "NodeJS", "GraphQL", "MySQL"] },
+    { name: "Sk8boarders", description: "Tailoring pages at any scale", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg", techs: ["WordPress", "PHP", "HTML/CSS", "MySQL"] },
   ]
 
   const socials = [
