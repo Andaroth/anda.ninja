@@ -23,7 +23,7 @@ export default function Home() {
   const creations = [
     { name: "RTFKT", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg" },
     { name: "GameOfBlocks", url: "https://gameofblocks.io", img: "/img/b2b/screenshot.jpeg" },
-    { name: "EtheRPG Online", url: "https://etherpg.online", img: "/img/b2b/etherpg.jpeg" },
+    { name: "Sk8boarders", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg" },
     { name: "Anda Pirate", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg" },
   ]
 
