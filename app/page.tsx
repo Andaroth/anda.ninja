@@ -217,7 +217,7 @@ export default function Home() {
         <div className="mt-4">
           <div className="flex flex-col gap-2 pb-2">
             <div className="flex justify-center">
-              <Link className="flex gap-1 justify-center" href="https://github.com/Andaroth/vcard-andapirate" target="_blank">
+              <Link className="flex gap-1 justify-center" href="https://github.com/Andaroth/anda.ninja" target="_blank">
                 <span>View codesource on GitHub</span>
                 <FaExternalLinkAlt size="14px" />
               </Link>
