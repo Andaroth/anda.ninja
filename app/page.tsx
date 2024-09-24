@@ -21,10 +21,10 @@ export default function Home() {
   const [delta, setDelta] = useState(0)
 
   const creations = [
-    { name: "RTFKT", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg" },
-    { name: "GameOfBlocks", url: "https://gameofblocks.io", img: "/img/b2b/screenshot.jpeg" },
-    { name: "Sk8boarders", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg" },
-    { name: "Anda Pirate", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg" },
+    { name: "RTFKT", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element"] },
+    { name: "GameOfBlocks", description: "Web3 Multiplayer Gaming", url: "https://gameofblocks.io", img: "/img/b2b/screenshot.jpeg", techs: ["ReactJS", "Blitz", "express"] },
+    { name: "Sk8boarders", description: "Tailoring pages at any scale", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg", techs: ["WordPress", "PHP", "HTML/CSS"] },
+    { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS"] },
   ]
 
   const socials = [
@@ -129,13 +129,26 @@ export default function Home() {
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
             <h2 className="text-2xl">Web3 &amp; Blockchain</h2>
             <p>I used to work with the best actors from the metaverse who <br />trust me to implement their most important website.</p>
-            <div className="grid gap-2 my-4 grid-cols-1 md:grid-cols-2">
-              { creations.map(creation => <Link key={creation.name} href={creation.url} target="_blank" className="creation rounded-md overflow-hidden flex flex-col cursor-pointer">
+            <div className="grid gap-2 my-4 grid-cols-1 sm:grid-cols-2">
+              { creations.map(creation => <Link
+                className="creation rounded-md overflow-hidden flex flex-col cursor-pointer"
+                key={creation.name}
+                href={creation.url}
+                target="_blank"
+              >
                 <div className="flex p-4 bg-black">
                   <h3 className="text-center w-full">@{creation.name}</h3>
                 </div>
-                <div className="w-full overflow-hidden h-[200px]">
-                  <Image className="thumbnail w-full h-full" src={creation.img} alt={creation.name} width="350" height="200" />
+                <div className="w-full overflow-hidden aspect-video bg-black">
+                  <Image className="thumbnail w-full aspect-video" src={creation.img} alt={creation.name} width="350" height="200" />
+                </div>
+                <div className="technos absolute mt-14 aspect-video opacity-0 transition-all z-100 rounded-b-lg">
+                  <div className="flex flex-col h-full justify-center w-full">
+                    <div className="pl-8 text-lg text-white whitespace-pre-wrap">{ creation.description }</div>
+                    { creation.techs.map((t,i) => <div key={i} className="text-left pl-8">
+                      <span className="text-white">&gt;</span>&nbsp;{t}
+                    </div>)}
+                  </div>
                 </div>
               </Link>)}
             </div>

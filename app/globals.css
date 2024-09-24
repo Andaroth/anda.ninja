@@ -125,12 +125,18 @@ button.detail:hover {
   text-align: center;
 }
 
-.creation .thumbnail {
+.creation .thumbnail,
+.creation .technos {
   transition: all .5s ease;
+  max-width: calc(100vw - 108px);
 }
 
 .creation:hover .thumbnail {
   transform: scale(1.1);
+  opacity: 0.15;
+}
+.creation:hover .technos {
+  opacity: 1;
 }
 
 .hoverSpin {
