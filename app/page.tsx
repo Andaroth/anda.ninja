@@ -21,8 +21,8 @@ export default function Home() {
   const [delta, setDelta] = useState(0)
 
   const creations = [
-    { name: "RTFKT", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs", "MongoDB"] },
-    { name: "Cryptopunk", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "NoDB"] },
+    { name: "NIKE", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs", "MongoDB"] },
+    { name: "RTFKT", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "NoDB"] },
     { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "i18n", "pgSQL"] },
     { name: "Winnables", description: "Blockchain trades & gambling", url: "https://winnables.com", img: "/img/b2b/winnables.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "pgSQL"] },
     { name: "iCure", description: "Connecting people to health online", url: "https://icure.com/fr/", img: "/img/b2b/icure.jpeg", techs: ["PolymerJS", "Kotlin", "BE gov API", "MySQL"] },
@@ -142,8 +142,8 @@ export default function Home() {
       <section id="portfolio" className="flex text-white p-8 md:pt-[30vh] flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
-            <h2 className="text-2xl">Web3 &amp; Blockchain</h2>
-            <p>I used to work with the best actors from the metaverse who <br />trust me to implement their most important website.</p>
+            <h2 className="text-2xl">Reliable &amp; Trustable</h2>
+            <p>I used to work with the best actors from the Internet who <br />trust me to implement their most important website.</p>
             <div className="grid gap-2 my-4 grid-cols-1 sm:grid-cols-2">
               { creations.map(creation => <Link
                 className="creation rounded-md overflow-hidden flex flex-col cursor-pointer"
@@ -198,8 +198,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col p-8 gap-2">
-              <p>Hello, my name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
-              <p>My dedication for the <strong>art of code</strong> and my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
+              <p>My name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
+              <p>I'm dedicated to the <strong>art of code</strong>, my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
               <p>Let me help you getting online and expand on the <strong>Internet of Things</strong>!</p>
               <div className="flex justify-center mt-4">
                 <div className="flex flex-col">
