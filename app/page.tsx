@@ -199,7 +199,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col p-8 gap-2">
               <p>My name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
-              <p>I'm dedicated to the <strong>art of code</strong>, my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
+              <p>I&apos;m dedicated to the <strong>art of code</strong>, my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
               <p>Let me help you getting online and expand on the <strong>Internet of Things</strong>!</p>
               <div className="flex justify-center mt-4">
                 <div className="flex flex-col">
