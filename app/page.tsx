@@ -21,12 +21,12 @@ export default function Home() {
   const [delta, setDelta] = useState(0)
 
   const creations = [
-    { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "NodeJS", "ReactJS", "NestJS", "pgSQL"]},
+    { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "ReactJS", "NestJS", "postgres", "Azure"]},
     { name: "NIKE", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs", "MongoDB"] },
-    { name: "RTFKT", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "NoDB"] },
-    { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "Python", "pgSQL"] },
-    { name: "Winnables", description: "Blockchain trades & gambling", url: "https://winnables.com", img: "/img/b2b/winnables.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "pgSQL"] },
-    { name: "iCure", description: "Connecting people to health online", url: "https://icure.com/fr/", img: "/img/b2b/icure.jpeg", techs: ["PolymerJS", "Kotlin", "BE gov API", "MySQL"] },
+    { name: "RTFKT", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "OnChain DB"] },
+    { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "Python", "postgres"] },
+    { name: "Winnables", description: "Blockchain trades & gambling", url: "https://winnables.com", img: "/img/b2b/winnables.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "postgres"] },
+    { name: "iCure", description: "Connecting people to health online", url: "https://icure.com/fr/", img: "/img/b2b/icure.jpeg", techs: ["PolymerJS", "Kotlin", "eHealth gov API", "MySQL"] },
     { name: "GameOfBlocks", description: "Web3 Multiplayer Gaming", url: "https://gameofblocks.io", img: "/img/b2b/screenshot.jpeg", techs: ["ReactJS", "Blitz", "etherjs", "express", "Ganache"] },
     { name: "TimbTrack", description: "Leading IoT innovation", url: "https://timbtrack.com", img: "/img/b2b/timbtrack.jpeg", techs: ["VueJS", "PHP", "NodeJS", "GraphQL", "MySQL"] },
     // { name: "Sk8boarders", description: "Tailoring pages at any scale", url: "https://sk8boarders.be", img: "/img/b2b/sk8boarders.jpeg", techs: ["WordPress", "PHP", "HTML/CSS", "MySQL"] },
@@ -161,8 +161,8 @@ export default function Home() {
                 <div className="technos absolute mt-14 aspect-video opacity-0 transition-all z-100 rounded-b-lg">
                   <div className="flex flex-col h-full justify-center w-full">
                     <div className="pl-8 text-lg text-white whitespace-pre-wrap">{ creation.description }</div>
-                    { creation.techs.map((t,i) => <div key={i} className="text-left pl-8">
-                      <span className="text-white">&gt;</span>&nbsp;{t}
+                    { creation.techs.map((t,i) => <div key={i} className="text-left text-sm pl-8">
+                      <strong className="text-white">&gt;</strong>&nbsp;{t}
                     </div>)}
                   </div>
                 </div>
