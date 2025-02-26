@@ -145,7 +145,7 @@ export default function Home() {
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
             <h2 className="text-2xl">Reliable &amp; Trustable</h2>
-            <p>I used to work with the best actors from the Internet who <br />trust me to implement their most important website.</p>
+            <p>I used to work with <strong>the best actors from the Internet</strong> who <br />trust me to <strong>implement their most important website</strong>.</p>
             <div className="grid gap-2 my-4 grid-cols-1 sm:grid-cols-2">
               { creations.map(creation => <Link
                 className="creation rounded-md overflow-hidden flex flex-col cursor-pointer"
@@ -219,7 +219,7 @@ export default function Home() {
       </section>
 
       <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] text-white border-t-4 border-[#cc9a54]">
-        <p>Remake with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
+        <p>Made with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
         <div className="mt-4">
           <div className="flex flex-col gap-2 pb-2">
             <div className="flex justify-center">
