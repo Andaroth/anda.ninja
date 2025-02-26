@@ -21,7 +21,7 @@ export default function Home() {
   const [delta, setDelta] = useState(0)
 
   const creations = [
-    { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI", "BERT", "NodeJS", "ReactJS"]},
+    { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "NodeJS", "ReactJS", "NestJS", "pgSQL"]},
     { name: "NIKE", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs", "MongoDB"] },
     { name: "RTFKT", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "NoDB"] },
     { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "Python", "pgSQL"] },
