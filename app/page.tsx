@@ -220,6 +220,12 @@ export default function Home() {
 
       <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] text-white border-t-4 border-[#cc9a54]">
         <p>Made with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
+        <div className="flex gap-1 justify-center">
+          <Link  href="https://metasense.be" target="_blank">
+            <span>Collaborator of MetaSense</span>
+          </Link>
+          <FaExternalLinkAlt size="14px" />
+        </div>
         <div className="mt-4">
           <div className="flex flex-col gap-2 pb-2">
             <div className="flex justify-center">
