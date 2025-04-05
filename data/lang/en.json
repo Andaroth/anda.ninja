@@ -1,0 +1,55 @@
+{
+  "topbar": {
+    "work": "My work",
+    "about": "About me",
+    "contact": "Contact"
+  },
+  "dev": {
+    "role": "Game Maker & Web Dev",
+    "bio": {
+      "0": "With more than fifteen years ",
+      "1": "building",
+      "2": " and ",
+      "3": "revolutionizing",
+      "4": " the ",
+      "5": "web",
+      "6": ", I can help you to create and assert your project"
+    },
+    "cta": "Learn more"
+  },
+  "portfolio": {
+    "title": "Reliable & Trustable",
+    "paragraph": {
+      "0": "I used to work with ",
+      "1": "the best actors from the Internet",
+      "2": "Internet who ",
+      "3": "trust me to ",
+      "4": "implement their most important website"
+    },
+    "signature": {
+      "0": "My skills are refined and precise,",
+      "1": "I'm a Code Guardian"
+    },
+    "cta": "Let's collaborate!"
+  },
+  "about": {
+    "title": "Passionate about new technologies",
+    "paragraph_a": {
+      "0": "My name is Axel Fiolle, alias ",
+      "1": "Andaroth",
+      "2": "I was young when I wrote my first line of code"
+    },
+    "paragraph_b": {
+      "0": "I'm dedicated to the  ",
+      "1": "art of code",
+      "2": ", my curiosity made me",
+      "3": "jump into the ",
+      "4": "Web3 paradigm"
+    },
+    "paragraph_c": {
+      "0": "Let me help you getting online and expand on the ",
+      "1": "Internet Of Things"
+    },
+    "cta": "Get in touch"
+  }
+}

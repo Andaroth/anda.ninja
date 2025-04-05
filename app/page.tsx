@@ -15,10 +15,49 @@ import {
   FaInstagram
 } from "react-icons/fa";
 
+import THFlag from "@/app/assets/flag/th.svg"
+import UKFlag from "@/app/assets/flag/uk.svg"
+
+import { useTranslation } from "react-i18next"
+import i18next from "i18next"
+
 export default function Home() {
+  const { t } = useTranslation();
+  const [lang, selectLang] = useState<string>(localStorage.getItem('lang') || 'en');
   const [lastScrollState, setLastScroll] = useState(0)
   const [newScrollState, setNewScroll] = useState(0)
   const [delta, setDelta] = useState(0)
+
+  const handleChangeLang = () => {
+    if (lang === 'en') {
+      i18next.changeLanguage('th')
+      localStorage.setItem('lang', 'th')
+      selectLang('th')
+    }
+    else {
+      i18next.changeLanguage('en')
+      localStorage.setItem('lang', 'en')
+      selectLang('en')
+    }
+  }
+
+  useEffect(() => {
+    // Exemple d'URL : https://example.com?lang=th
+    const urlParams = new URLSearchParams(window.location.search);
+    const force = urlParams.get('lang');
+    if (!!force && force === 'en' || force === 'th') {
+      i18next.changeLanguage(force)
+      localStorage.setItem('lang', force)
+      return selectLang(force)
+    }
+    if (localStorage.getItem('lang')) {
+      const storage = localStorage.getItem('lang');
+      if (storage === 'en' || storage === 'th') {
+        i18next.changeLanguage(storage)
+        selectLang(storage)
+      }
+    } else { selectLang('en') }
+  }, [])
 
   const creations = [
     { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "ReactJS", "NestJS", "postgres", "Azure"]},
@@ -91,26 +130,34 @@ export default function Home() {
             <h1 className="text-white"><Link href="#" onClick={(e) => handleScrollTo(e, "#dev")} className="text-3xl">![Λnda]</Link></h1>
           </div>
           <nav>
-            <ul className="flex justify-end gap-4">
+            <ul className="flex justify-end sm:gap-4 gap-2">
+              <li className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center h-full">
+                  <div className="flex sm:gap-1 cursor-pointer" onClick={handleChangeLang}>
+                    <Image src={lang === 'en' ? THFlag : UKFlag} alt="Change lang" height={16} />
+                    <span className="hidden sm:block">{lang === 'en' ? 'ไทย' : 'English'}</span>
+                  </div>
+                </div>
+              </li>
               <li className="hidden sm:flex flex-col justify-center">
                 <Link
                   className="flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
                   href="#"
                   onClick={(e) => handleScrollTo(e, "#portfolio")}
-                >My work</Link>
+                >{t('topbar.work')}</Link>
               </li>
               <li className="flex flex-col justify-center">
                 <Link
                   className="hidden sm:flex flex-col justify-center h-full text-xl border-b-4 border-transparent hover:border-[#cc9a54]"
                   href="#"
                   onClick={(e) => handleScrollTo(e, "#about")}
-                >About me</Link>
+                >{t('topbar.about')}</Link>
               </li>
               <li>
               <Link href="mailto:ax.fiolle@gmail.com" >
                 <button className="contact flex gap-2 justify-center border-2 my-2 py-0 px-2 rounded-md uppercase h-[48px] bg-black hover:bg-white hover:text-black">
                   <div className="flex flex-col h-full justify-center text-md">
-                    <span>Contact</span>
+                    <span>{t('topbar.contact')}</span>
                   </div>
                   <div className="flex flex-col h-full justify-center">
                     <span>
@@ -129,12 +176,12 @@ export default function Home() {
         <div className="flex justify-end">
           <div className="card flex flex-col gap-4 p-4 rounded-lg bg-[#00000088] w-[600px] max-w-full">
             <div className="flex justify-center">
-              <h2 className="text-2xl pb-4 border-b-2">Game Maker &amp; Web Dev</h2>
+              <h2 className="text-2xl pb-4 border-b-2">{t('dev.role')}</h2>
             </div>
-            <p className="text-xl">With more than fifteen years <strong>building</strong> and <strong>revolutionizing</strong> <br />the <strong>web</strong>, I can help you to create and assert your project.</p>
+            <p className="text-xl">{t('dev.bio.0')}<strong>{t('dev.bio.1')}</strong>{t('dev.bio.2')}<strong>{t('dev.bio.3')}</strong><br />{t('dev.bio.4')}<strong>{t('dev.bio.5')}</strong>{t('dev.bio.6')}.</p>
             <div className="flex justify-center">
               <div className="flex flex-col">
-                <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>Learn more</button>
+                <button className="detail rounded-md" onClick={(e) => handleScrollTo(e, "#portfolio")}>{t('dev.cta')}</button>
               </div>
             </div>
           </div>
@@ -144,8 +191,8 @@ export default function Home() {
       <section id="portfolio" className="flex text-white p-8 md:pt-[30vh] flex-col justify-center min-h-[100dvh] bg-[url(/img/clonex_003_mobile.jpeg)] md:bg-[url(/img/clonex_003.jpeg)] bg-cover bg-fixed">
         <div className="flex justify-center">
           <div className="card flex flex-col gap-2 p-4 rounded-lg bg-[#00000088] w-[960px] max-w-full">
-            <h2 className="text-2xl">Reliable &amp; Trustable</h2>
-            <p>I used to work with <strong>the best actors from the Internet</strong> who <br />trust me to <strong>implement their most important website</strong>.</p>
+            <h2 className="text-2xl">{t('portfolio.title')}</h2>
+            <p>{t('portfolio.paragraph.0')}<strong>{t('portfolio.paragraph.1')}</strong>{t('portfolio.paragraph.2')}<br />{t('portfolio.paragraph.3')}<strong>{t('portfolio.paragraph.4')}</strong>.</p>
             <div className="grid gap-2 my-4 grid-cols-1 sm:grid-cols-2">
               { creations.map(creation => <Link
                 className="creation rounded-md overflow-hidden flex flex-col cursor-pointer"
@@ -171,14 +218,14 @@ export default function Home() {
             </div>
             <div className="flex gap-2 justify-center">
               <aside className="hidden md:flex flex-col justify-center"><Image src="/img/emoji/wizard.svg" alt="decoration" width="32" height="32" /></aside>
-              <p className="text-center">My skills are refined and precise, <br />I&apos;m a Code Guardian</p>
+              <p className="text-center">{t('portfolio.signature.0')}<br />{t('portfolio.signature.1')}</p>
               <aside className="hidden md:flex flex-col justify-center"><Image src="/img/emoji/ninja.svg" alt="decoration" width="32" height="32" /></aside>
             </div>
             <div className="flex justify-center mt-4">
               <div className="flex flex-col">
                 <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
                   <button className="detail rounded-md">
-                      <p>Let&apos;s collaborate!</p>
+                      <p>{t('portfolio.cta')}</p>
                       <i></i>
                   </button>
                 </Link>
@@ -196,18 +243,18 @@ export default function Home() {
                 <Image src="/img/avatar.jpeg" alt="Axel Andaroth" width="48" height="48" className="rounded-[50%]" />
               </div>
               <div className="flex flex-col justify-center">
-                <h2 className="text-2xl text-left]">Passionate about new technologies</h2>
+                <h2 className="text-2xl text-left]">{t('about.title')}</h2>
               </div>
             </div>
             <div className="flex flex-col p-8 gap-2">
-              <p>My name is Axel Fiolle, alias <strong>Andaroth</strong>!<br />I was young when I wrote my first line of code.</p>
-              <p>I&apos;m dedicated to the <strong>art of code</strong>, my curiosity made me<br /> jump into the <strong>Web3 paradigm</strong>.</p>
-              <p>Let me help you getting online and expand on the <strong>Internet of Things</strong>!</p>
+              <p>{t('about.paragraph_a.0')}<strong>{t('about.paragraph_a.1')}</strong>!<br />{t('about.paragraph_a.2')}.</p>
+              <p>{t('about.paragraph_b.0')}<strong>{t('about.paragraph_b.1')}</strong>{t('about.paragraph_b.2')}<br />{t('about.paragraph_b.3')}<strong>{t('about.paragraph_b.4')}</strong>.</p>
+              <p>{t('about.paragraph_c.0')}<strong>{t('about.paragraph_c.1')}</strong>!</p>
               <div className="flex justify-center mt-4">
                 <div className="flex flex-col">
                   <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
                     <button className="detail rounded-md">
-                        <p>Get in touch</p>
+                        <p>{t('about.cta')}</p>
                         <i></i>
                     </button>
                   </Link>
