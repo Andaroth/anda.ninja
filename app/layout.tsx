@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import "./i18config" // makes lang available across the app
+import i18next from "i18next";
+
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +16,21 @@ export default function RootLayout({
 }>) {
   const title = "Anda Ninja"
   const description = "Creator of incredible interfaces to make the web a wonderful world."
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const force = urlParams.get('lang');
+    if (!!force && force === 'en' || force === 'th') {
+      i18next.changeLanguage(force)
+      localStorage.setItem('lang', force)
+    }
+    if (localStorage.getItem('lang')) {
+      const storage = localStorage.getItem('lang');
+      if (storage === 'en' || storage === 'th') {
+        i18next.changeLanguage(storage)
+      }
+    }
+  }, [])
 
   return (
     <html lang="en">

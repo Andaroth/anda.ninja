@@ -42,18 +42,15 @@ export default function Home() {
   }
 
   useEffect(() => {
-    // Exemple d'URL : https://example.com?lang=th
     const urlParams = new URLSearchParams(window.location.search);
     const force = urlParams.get('lang');
     if (!!force && force === 'en' || force === 'th') {
       i18next.changeLanguage(force)
-      localStorage.setItem('lang', force)
       return selectLang(force)
     }
     if (localStorage.getItem('lang')) {
       const storage = localStorage.getItem('lang');
       if (storage === 'en' || storage === 'th') {
-        i18next.changeLanguage(storage)
         selectLang(storage)
       }
     } else { selectLang('en') }
