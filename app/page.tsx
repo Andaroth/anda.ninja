@@ -151,7 +151,7 @@ export default function Home() {
                 >{t('topbar.about')}</Link>
               </li>
               <li>
-              <Link href="mailto:ax.fiolle@gmail.com" >
+              <Link href="mailto:anda_pirate@proton.me" >
                 <button className="contact flex gap-2 justify-center border-2 my-2 py-0 px-2 rounded-md uppercase h-[48px] bg-black hover:bg-white hover:text-black">
                   <div className="flex flex-col h-full justify-center text-md">
                     <span>{t('topbar.contact')}</span>
@@ -220,7 +220,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center mt-4">
               <div className="flex flex-col">
-                <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
+                <Link className="flex justify-center" href="mailto:anda_pirate@proton.me">
                   <button className="detail rounded-md">
                       <p>{t('portfolio.cta')}</p>
                       <i></i>
@@ -249,7 +249,7 @@ export default function Home() {
               <p>{t('about.paragraph_c.0')}<strong>{t('about.paragraph_c.1')}</strong>!</p>
               <div className="flex justify-center mt-4">
                 <div className="flex flex-col">
-                  <Link className="flex justify-center" href="mailto:ax.fiolle@gmail.com">
+                  <Link className="flex justify-center" href="mailto:anda_pirate@proton.me">
                     <button className="detail rounded-md">
                         <p>{t('about.cta')}</p>
                         <i></i>

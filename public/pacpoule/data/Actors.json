@@ -1,0 +1,5 @@
+[
+null,
+{"id":1,"battlerName":"","characterIndex":2,"characterName":"Nature","classId":1,"equips":[3,0,2,3,4],"faceIndex":2,"faceName":"Nature","traits":[],"initialLevel":99,"maxLevel":99,"name":"Pac Poule","nickname":"","note":"","profile":""},
+{"id":2,"battlerName":"","characterIndex":2,"characterName":"Nature","classId":1,"equips":[3,0,2,3,4],"faceIndex":2,"faceName":"Nature","traits":[],"initialLevel":99,"maxLevel":99,"name":"Poulet perdu","nickname":"","note":"","profile":""}
+]
