@@ -23,7 +23,7 @@ import i18next from "i18next"
 
 export default function Home() {
   const { t } = useTranslation();
-  const [lang, selectLang] = useState<string>(localStorage.getItem('lang') || 'en');
+  const [lang, selectLang] = useState<string>('en');
   const [lastScrollState, setLastScroll] = useState(0)
   const [newScrollState, setNewScroll] = useState(0)
   const [delta, setDelta] = useState(0)
