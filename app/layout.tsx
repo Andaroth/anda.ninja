@@ -2,7 +2,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import ACursor from "./components/a-cursor";
+import "./i18config" // makes lang available across the app
 
 const inter = Inter({ subsets: ["latin"] });
 
