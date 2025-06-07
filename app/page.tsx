@@ -57,7 +57,7 @@ export default function Home() {
   }, [])
 
   const creations = [
-    { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "ReactJS", "NestJS", "postgres", "Azure"]},
+    { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "ReactJS", "NestJS", "postgres", "Azure"] },
     { name: "NIKE", description: "Web3 & Blockchain Apps", url: "https://rtfkt.com", img: "/img/b2b/rtfkt.jpeg", techs: ["VueJS", "lit-element", "NodeJS", "etherjs", "MongoDB"] },
     { name: "RTFKT", description: "Crypto & NFT Minting", url: "https://web.archive.org/web/20210616144208/https://cryptopunk.rtfkt.com/", img: "/img/b2b/cryptopunk.jpeg", techs: ["VueJS", "lit-element", "WebGL", "web3js", "OnChain DB"] },
     { name: "Anda Pirate", description: "Transmitting the cyber passion", url: "https://www.andapirate.com", img: "/img/b2b/andapirate.jpeg", techs: ["NextJS", "ReactJS", "TailwindCSS", "Python", "postgres"] },
@@ -70,11 +70,11 @@ export default function Home() {
   ]
 
   const socials = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/axel-fiolle/", icon: <FaLinkedin className="hoverSpin" size="2em" />},
-    { name: "GitHub", url: "https://github.com/Andaroth", icon: <FaGithub className="hoverSpin" size="2em" />},
-    { name: "Twitter", url: "https://twitter.com/Andaroth", icon: <FaTwitter className="hoverSpin" size="2em" />},
-    { name: "TikTok", url: "https://tiktok.com/@anda_pirate", icon: <FaTiktok className="hoverSpin" size="2em" />},
-    { name: "Instagram", url: "https://instagram.com/anda_pirate", icon: <FaInstagram className="hoverSpin" size="2em" />},
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/axel-fiolle/", icon: <FaLinkedin className="hoverSpin" size="2em" /> },
+    { name: "GitHub", url: "https://github.com/Andaroth", icon: <FaGithub className="hoverSpin" size="2em" /> },
+    { name: "Twitter", url: "https://twitter.com/Andaroth", icon: <FaTwitter className="hoverSpin" size="2em" /> },
+    { name: "TikTok", url: "https://tiktok.com/@anda_pirate", icon: <FaTiktok className="hoverSpin" size="2em" /> },
+    { name: "Instagram", url: "https://instagram.com/anda_pirate", icon: <FaInstagram className="hoverSpin" size="2em" /> },
   ]
 
   useEffect(() => {
@@ -88,7 +88,7 @@ export default function Home() {
         })
       })
     })
-    return () => window.removeEventListener("scroll", () => {})
+    return () => window.removeEventListener("scroll", () => { })
   }, [lastScrollState, newScrollState])
 
   const handleScrollTo = (e: any, anchor: string) => {
@@ -96,9 +96,9 @@ export default function Home() {
     const domElement = document.querySelector(anchor)
     if (domElement) {
       window.scroll({
-        top: window.scrollY + (domElement.getBoundingClientRect().top || 0), 
-        left: 0, 
-        behavior: 'smooth' 
+        top: window.scrollY + (domElement.getBoundingClientRect().top || 0),
+        left: 0,
+        behavior: 'smooth'
       });
     }
   }
@@ -108,9 +108,9 @@ export default function Home() {
       const anchor = window.location.href.split('#')[1]
       const domAnchor = document.querySelector('#' + anchor)
       if (domAnchor) window.scroll({
-        top: window.scrollY + (domAnchor.getBoundingClientRect().top || 0), 
-        left: 0, 
-        behavior: 'smooth' 
+        top: window.scrollY + (domAnchor.getBoundingClientRect().top || 0),
+        left: 0,
+        behavior: 'smooth'
       });
     }
   }, [])
@@ -120,7 +120,7 @@ export default function Home() {
       <div id="topbar" className={cn(
         "fixed px-2 flex justify-center top-0 left-0 w-full transition duration-200 z-50",
         lastScrollState >= 80 ? "bg-[#00000088]" : ""
-        )}
+      )}
       >
         <div className="flex w-full justify-between text-white">
           <div className="flex flex-col justify-center">
@@ -151,17 +151,17 @@ export default function Home() {
                 >{t('topbar.about')}</Link>
               </li>
               <li>
-              <Link href="mailto:anda_pirate@proton.me" >
-                <button className="contact flex gap-2 justify-center border-2 my-2 py-0 px-2 rounded-md uppercase h-[48px] bg-black hover:bg-white hover:text-black">
-                  <div className="flex flex-col h-full justify-center text-md">
-                    <span>{t('topbar.contact')}</span>
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <span>
-                      <FaMarker size="1em" />
-                    </span>
-                  </div>
-                </button>
+                <Link href="mailto:anda_pirate@proton.me" >
+                  <button className="contact flex gap-2 justify-center border-2 my-2 py-0 px-2 rounded-md uppercase h-[48px] bg-black hover:bg-white hover:text-black">
+                    <div className="flex flex-col h-full justify-center text-md">
+                      <span>{t('topbar.contact')}</span>
+                    </div>
+                    <div className="flex flex-col h-full justify-center">
+                      <span>
+                        <FaMarker size="1em" />
+                      </span>
+                    </div>
+                  </button>
                 </Link>
               </li>
             </ul>
@@ -191,7 +191,7 @@ export default function Home() {
             <h2 className="text-2xl">{t('portfolio.title')}</h2>
             <p>{t('portfolio.paragraph.0')}<strong>{t('portfolio.paragraph.1')}</strong>{t('portfolio.paragraph.2')}<br />{t('portfolio.paragraph.3')}<strong>{t('portfolio.paragraph.4')}</strong>.</p>
             <div className="grid gap-2 my-4 grid-cols-1 sm:grid-cols-2">
-              { creations.map(creation => <Link
+              {creations.map(creation => <Link
                 className="creation rounded-md overflow-hidden flex flex-col cursor-pointer"
                 key={creation.name}
                 href={creation.url}
@@ -205,8 +205,8 @@ export default function Home() {
                 </div>
                 <div className="technos absolute mt-14 aspect-video opacity-0 transition-all z-100 rounded-b-lg">
                   <div className="flex flex-col h-full justify-center w-full">
-                    <div className="pl-8 text-lg text-white whitespace-pre-wrap">{ creation.description }</div>
-                    { creation.techs.map((t,i) => <div key={i} className="text-left text-sm pl-8">
+                    <div className="pl-8 text-lg text-white whitespace-pre-wrap">{creation.description}</div>
+                    {creation.techs.map((t, i) => <div key={i} className="text-left text-sm pl-8">
                       <strong className="text-white">&gt;</strong>&nbsp;{t}
                     </div>)}
                   </div>
@@ -222,8 +222,8 @@ export default function Home() {
               <div className="flex flex-col">
                 <Link className="flex justify-center" href="mailto:anda_pirate@proton.me">
                   <button className="detail rounded-md">
-                      <p>{t('portfolio.cta')}</p>
-                      <i></i>
+                    <p>{t('portfolio.cta')}</p>
+                    <i></i>
                   </button>
                 </Link>
               </div>
@@ -251,8 +251,8 @@ export default function Home() {
                 <div className="flex flex-col">
                   <Link className="flex justify-center" href="mailto:anda_pirate@proton.me">
                     <button className="detail rounded-md">
-                        <p>{t('about.cta')}</p>
-                        <i></i>
+                      <p>{t('about.cta')}</p>
+                      <i></i>
                     </button>
                   </Link>
                 </div>
@@ -264,12 +264,12 @@ export default function Home() {
 
       <footer className="p-8 gap-2 flex flex-col text-center bg-[#2e3133] text-white border-t-4 border-[#cc9a54]">
         <p>Made with <code>NextJS</code>, <code>ReactJS</code> &amp; <code>TailWindCSS</code></p>
-        <div className="flex gap-1 justify-center">
+        {/* <div className="flex gap-1 justify-center">
           <Link  href="https://metasense.be" target="_blank">
             <span>Collaborator of MetaSense</span>
           </Link>
           <FaExternalLinkAlt size="14px" />
-        </div>
+        </div> */}
         <div className="mt-4">
           <div className="flex flex-col gap-2 pb-2">
             <div className="flex justify-center">
@@ -289,7 +289,7 @@ export default function Home() {
         <div className="flex justify-center">
           <div className="flex flex-col py-2">
             <div className="flex justify-center gap-4">
-              { socials.map(social => <Link key={socials.indexOf(social)} href={social.url} target="_blank">{social.icon}</Link>)}
+              {socials.map(social => <Link key={socials.indexOf(social)} href={social.url} target="_blank">{social.icon}</Link>)}
             </div>
           </div>
         </div>
