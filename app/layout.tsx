@@ -36,8 +36,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>{title || "Andaroth"}</title>
-        <link rel="icon" href="./img/fav.gif" />
-        <meta property="og:image" content="./img/fav.gif" />
+        <link rel="icon" href="./img/favicon.ico" />
+        <meta property="og:image" content="./img/favicon.ico" />
         <meta property="og:title" content={title || "Andaroth"} />
         <meta property="og:description" content={description} />
         <meta name="description" content={description} />
@@ -58,7 +58,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         {/* <ACursor /> */}
-        </body>
+      </body>
     </html>
   );
 }
