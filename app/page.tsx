@@ -15,7 +15,7 @@ import {
   FaInstagram
 } from "react-icons/fa";
 
-import THFlag from "@/app/assets/flag/th.svg"
+import FRFlag from "@/app/assets/flag/fr.svg"
 import UKFlag from "@/app/assets/flag/uk.svg"
 
 import { useTranslation } from "react-i18next"
@@ -30,9 +30,9 @@ export default function Home() {
 
   const handleChangeLang = () => {
     if (lang === 'en') {
-      i18next.changeLanguage('th')
-      localStorage.setItem('lang', 'th')
-      selectLang('th')
+      i18next.changeLanguage('fr')
+      localStorage.setItem('lang', 'fr')
+      selectLang('fr')
     }
     else {
       i18next.changeLanguage('en')
@@ -44,13 +44,13 @@ export default function Home() {
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const force = urlParams.get('lang');
-    if (!!force && force === 'en' || force === 'th') {
+    if (!!force && force === 'en' || force === 'fr') {
       i18next.changeLanguage(force)
       return selectLang(force)
     }
     if (localStorage.getItem('lang')) {
       const storage = localStorage.getItem('lang');
-      if (storage === 'en' || storage === 'th') {
+      if (storage === 'en' || storage === 'fr') {
         selectLang(storage)
       }
     } else { selectLang('en') }
@@ -131,8 +131,8 @@ export default function Home() {
               <li className="flex flex-col justify-center">
                 <div className="flex flex-col justify-center h-full">
                   <div className="flex sm:gap-1 cursor-pointer" onClick={handleChangeLang}>
-                    <Image src={lang === 'en' ? THFlag : UKFlag} alt="Change lang" height={16} />
-                    <span className="hidden sm:block">{lang === 'en' ? 'ไทย' : 'English'}</span>
+                    <Image src={lang === 'en' ? FRFlag : UKFlag} alt="Change lang" height={16} />
+                    <span className="hidden sm:block">{lang === 'en' ? 'FR' : 'EN'}</span>
                   </div>
                 </div>
               </li>

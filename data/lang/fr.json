@@ -1,0 +1,55 @@
+{
+  "topbar": {
+    "work": "Portfolio",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "dev": {
+    "role": "Game Maker & Web Dev",
+    "bio": {
+      "0": "Avec plus de quinze ans à ",
+      "1": "bâtir",
+      "2": " et ",
+      "3": "révolutionner",
+      "4": " le ",
+      "5": "web",
+      "6": ", je peux vous aider à imposer votre projet en ligne"
+    },
+    "cta": "En savoir plus"
+  },
+  "portfolio": {
+    "title": "Confiance & Qualité",
+    "paragraph": {
+      "0": "J'ai collaboré avec ",
+      "1": "de grandes marques d'Internet",
+      "2": " qui ",
+      "3": "m'ont fait confiance pour ",
+      "4": "développer leur projets"
+    },
+    "signature": {
+      "0": "Haute qualité et précision,",
+      "1": "je suis un gardien du code"
+    },
+    "cta": "Collaborons!"
+  },
+  "about": {
+    "title": "Passioné des nouvelles technologies",
+    "paragraph_a": {
+      "0": "Mon nom est Axel Fiolle, alias ",
+      "1": "Andaroth",
+      "2": "J'ai codé mes premiers projets durant l'enfance"
+    },
+    "paragraph_b": {
+      "0": "Je suis dédié à  ",
+      "1": "l'art du code",
+      "2": ", ma curiosité m'a mené",
+      "3": "à développer ",
+      "4": "des solutions d'IA"
+    },
+    "paragraph_c": {
+      "0": "Laissez-moi déployer vos projets sur ",
+      "1": "l'Internet de demain"
+    },
+    "cta": "Contactez-moi"
+  }
+}
