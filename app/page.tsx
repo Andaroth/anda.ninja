@@ -39,7 +39,7 @@ export default function Home() {
       localStorage.setItem('lang', 'en')
       selectLang('en')
     }
-    else {
+    if (lang === 'fr') {
       i18next.changeLanguage('en')
       localStorage.setItem('lang', 'en')
       selectLang('en')
@@ -59,7 +59,7 @@ export default function Home() {
     }
     if (localStorage.getItem('lang')) {
       const storage = localStorage.getItem('lang');
-      if (storage === 'en' || storage === 'fr') {
+      if (storage === 'en' || storage === 'fr' || storage === 'th') {
         selectLang(storage)
       }
     } else { selectLang('en') }
