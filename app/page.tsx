@@ -34,6 +34,11 @@ export default function Home() {
       localStorage.setItem('lang', 'fr')
       selectLang('fr')
     }
+    if (lang === 'th') {
+      i18next.changeLanguage('en')
+      localStorage.setItem('lang', 'en')
+      selectLang('en')
+    }
     else {
       i18next.changeLanguage('en')
       localStorage.setItem('lang', 'en')
@@ -45,6 +50,10 @@ export default function Home() {
     const urlParams = new URLSearchParams(window.location.search);
     const force = urlParams.get('lang');
     if (!!force && force === 'en' || force === 'fr') {
+      i18next.changeLanguage(force)
+      return selectLang(force)
+    }
+    if (!!force && force === 'th' || force === 'th') {
       i18next.changeLanguage(force)
       return selectLang(force)
     }

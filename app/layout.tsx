@@ -20,13 +20,13 @@ export default function RootLayout({
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const force = urlParams.get('lang');
-    if (!!force && force === 'en' || force === 'fr') {
+    if (!!force && force === 'en' || force === 'fr' || force === 'th') {
       i18next.changeLanguage(force)
       localStorage.setItem('lang', force)
     }
     if (localStorage.getItem('lang')) {
       const storage = localStorage.getItem('lang');
-      if (storage === 'en' || storage === 'fr') {
+      if (storage === 'en' || storage === 'fr' || storage === 'th') {
         i18next.changeLanguage(storage)
       }
     }

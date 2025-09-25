@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 
 import en from "@/data/lang/en.json"
 import fr from "@/data/lang/fr.json"
+import th from "@/data/lang/th.json"
 
 i18next.use(initReactI18next).init({
   lng: "en",
@@ -10,5 +11,6 @@ i18next.use(initReactI18next).init({
   resources: {
     en: { translation: en },
     fr: { translation: fr },
+    th: { translation: th },
   }
 });
