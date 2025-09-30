@@ -141,7 +141,7 @@ export default function Home() {
                   {langMenuVisible ? <div className="absolute">
                     <div className="absolute flex flex-col gap-2 border-1 p-2 bg-black w-28 rounded-lg top-4 z-10">
                       {Object.values(langs).filter((v) => v.target !== lang).map((l, i) => (
-                        <button className="flex gap-2" key={i} onClick={
+                        <button className="flex gap-2 hover:underline hover:font-bold" key={i} onClick={
                           () => l.target !== lang ? handleChangeLang(l.target as LangLabel) : null
                         }>
                           <Image src={l.img} alt="Change lang" height={16} />
