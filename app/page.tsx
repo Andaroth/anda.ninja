@@ -53,9 +53,9 @@ export default function Home() {
   }, [])
 
   const langs = {
-    fr: { label: "FR", target: "fr", img: FRFlag },
-    en: { label: "EN", target: "en", img: UKFlag },
-    th: { label: "TH", target: "th", img: THFlag },
+    en: { label: "English", target: "en", img: UKFlag },
+    fr: { label: "Français", target: "fr", img: FRFlag },
+    th: { label: "ภาษาไทย", target: "th", img: THFlag },
   };
   const selectedLangItem = useMemo(() => langs[lang] || langs['en'], [lang])
 
@@ -136,13 +136,13 @@ export default function Home() {
                 <div className="flex flex-col justify-center h-full">
                   <div className="flex sm:gap-1 cursor-pointer" onClick={() => setLangMenuVisible(!langMenuVisible)}>
                     <Image src={selectedLangItem.img} alt="Change lang" height={16} />
-                    <span className="hidden sm:block">{selectedLangItem.label}&nbsp;{langMenuVisible ? <span>&#9206;</span> : <span>&#9207;</span>}</span>
+                    <span className="hidden sm:block">{selectedLangItem.target.toUpperCase()}&nbsp;{langMenuVisible ? <span>&#9206;</span> : <span>&#9207;</span>}</span>
                   </div>
                   {langMenuVisible ? <div className="absolute">
-                    <div className="absolute flex flex-col gap-2 border-1 p-2 bg-black w-16 rounded-lg top-4 z-10">
-                      {Object.values(langs).filter((v) => v.label.toLowerCase() !== lang).map((l, i) => (
+                    <div className="absolute flex flex-col gap-2 border-1 p-2 bg-black w-28 rounded-lg top-4 z-10">
+                      {Object.values(langs).filter((v) => v.target !== lang).map((l, i) => (
                         <button className="flex gap-2" key={i} onClick={
-                          () => l.label.toLowerCase() !== lang ? handleChangeLang(l.label.toLowerCase() as LangLabel) : null
+                          () => l.target !== lang ? handleChangeLang(l.target as LangLabel) : null
                         }>
                           <Image src={l.img} alt="Change lang" height={16} />
                           <span>{l.label}</span>
