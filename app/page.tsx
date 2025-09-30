@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import cn from "classnames";
 
 import Link from "next/link";
@@ -17,53 +17,47 @@ import {
 
 import FRFlag from "@/app/assets/flag/fr.svg"
 import UKFlag from "@/app/assets/flag/uk.svg"
+import THFlag from "@/app/assets/flag/th.svg"
 
 import { useTranslation } from "react-i18next"
 import i18next from "i18next"
 
 export default function Home() {
+  type LangLabel = "fr" | "en" | "th"
+
   const { t } = useTranslation();
-  const [lang, selectLang] = useState<string>('en');
+  const [lang, selectLang] = useState<LangLabel>('en');
+  const [langMenuVisible, setLangMenuVisible] = useState<boolean>(false);
   const [lastScrollState, setLastScroll] = useState(0)
   const [newScrollState, setNewScroll] = useState(0)
   const [delta, setDelta] = useState(0)
 
-  const handleChangeLang = () => {
-    if (lang === 'en') {
-      i18next.changeLanguage('fr')
-      localStorage.setItem('lang', 'fr')
-      selectLang('fr')
-    }
-    if (lang === 'th') {
-      i18next.changeLanguage('en')
-      localStorage.setItem('lang', 'en')
-      selectLang('en')
-    }
-    if (lang === 'fr') {
-      i18next.changeLanguage('en')
-      localStorage.setItem('lang', 'en')
-      selectLang('en')
-    }
+  const handleChangeLang = (target: LangLabel) => {
+    i18next.changeLanguage(target)
+    localStorage.setItem('lang', target)
+    selectLang(target)
+    setLangMenuVisible(false)
+    return;
   }
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const force = urlParams.get('lang');
-    if (!!force && force === 'en' || force === 'fr') {
-      i18next.changeLanguage(force)
-      return selectLang(force)
-    }
-    if (!!force && force === 'th' || force === 'th') {
-      i18next.changeLanguage(force)
-      return selectLang(force)
-    }
-    if (localStorage.getItem('lang')) {
+    if (!!force && force === 'en' || force == 'fr' || force == 'th')
+      return handleChangeLang(force)
+    else if (localStorage.getItem('lang')) {
       const storage = localStorage.getItem('lang');
-      if (storage === 'en' || storage === 'fr' || storage === 'th') {
-        selectLang(storage)
-      }
-    } else { selectLang('en') }
+      if (storage === 'en' || storage === 'fr' || storage === 'th')
+        handleChangeLang(storage)
+    } else { handleChangeLang('en') }
   }, [])
+
+  const langs = {
+    fr: { label: "FR", target: "fr", img: FRFlag },
+    en: { label: "EN", target: "en", img: UKFlag },
+    th: { label: "TH", target: "th", img: THFlag },
+  };
+  const selectedLangItem = useMemo(() => langs[lang] || langs['en'], [lang])
 
   const creations = [
     { name: 'Vidyā AI', description: "Homemade AI assistant", url: "https://vidya.chat", img: "/img/b2b/vidya.jpeg", techs: ["ElectronJS", "OpenAI/BERT", "ReactJS", "NestJS", "postgres", "Azure"] },
@@ -92,6 +86,7 @@ export default function Home() {
         const offset = window.pageYOffset || 0
         setNewScroll(offset)
         requestAnimationFrame(() => {
+          setLangMenuVisible(false)
           setDelta(newScrollState - lastScrollState)
           requestAnimationFrame(() => setLastScroll(offset))
         })
@@ -139,10 +134,22 @@ export default function Home() {
             <ul className="flex justify-end sm:gap-4 gap-2">
               <li className="flex flex-col justify-center">
                 <div className="flex flex-col justify-center h-full">
-                  <div className="flex sm:gap-1 cursor-pointer" onClick={handleChangeLang}>
-                    <Image src={lang === 'en' ? FRFlag : UKFlag} alt="Change lang" height={16} />
-                    <span className="hidden sm:block">{lang === 'en' ? 'FR' : 'EN'}</span>
+                  <div className="flex sm:gap-1 cursor-pointer" onClick={() => setLangMenuVisible(!langMenuVisible)}>
+                    <Image src={selectedLangItem.img} alt="Change lang" height={16} />
+                    <span className="hidden sm:block">{selectedLangItem.label}&nbsp;{langMenuVisible ? <span>&#9206;</span> : <span>&#9207;</span>}</span>
                   </div>
+                  {langMenuVisible ? <div className="absolute border-1 p-2 bg-black rounded-lg top-12">
+                    {Object.values(langs).map((l, i) => (
+                      <button className="flex gap-2" key={i} onClick={
+                        () => l.label.toLowerCase() !== lang ? handleChangeLang(l.label.toLowerCase() as LangLabel) : null
+                      }
+                        disabled={l.label.toLowerCase() === lang}
+                      >
+                        <Image src={l.img} alt="Change lang" height={16} />
+                        <span className={lang == l.label.toLowerCase() ? 'underline text-orange-500' : ''}>{l.label}</span>
+                      </button>
+                    ))}
+                  </div> : ''}
                 </div>
               </li>
               <li className="hidden sm:flex flex-col justify-center">
